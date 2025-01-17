@@ -194,7 +194,7 @@ async def scrape_id(playwright, id, check_in, check_out):
     url = f"https://www.airbnb.co.za/rooms/{id}?adults=1&category_tag=Tag%3A8678&enable_m3_private_room=true&photo_id=1602362717&search_mode=regular_search&source_impression_id=p3_1721650674_P36bK5Ps7ufayXNj&previous_page_section_name=1000&federated_search_id=9cc4e6a6-d201-4efc-b0a6-142e51c608da&guests=1&check_in={check_in_str}&check_out={check_out_str}"
     
     #url = f"https://www.airbnb.co.za/rooms/{id}"
-    browser = await playwright.chromium.launch(headless=False)
+    browser = await playwright.chromium.launch(headless=True)
     page = await browser.new_page()
     try:
         await page.goto(url)
