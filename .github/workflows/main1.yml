@@ -26,7 +26,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install selenium beautifulsoup4 pandas sqlalchemy pyodbc webdriver-manager azure-storage-blob playwright asyncio
+          pip install selenium beautifulsoup4 pandas sqlalchemy pyodbc webdriver-manager azure-storage-blob asyncio
+          python -m pip install playwright
           python -m playwright install
   
       - name: Install Chrome WebDriver
